@@ -1,6 +1,6 @@
-exports.soundAlarm = function(time) {
+exports.soundAlarm = function(time, now) {
   if(time != null) {
-    if(moment().diff(time, 'seconds') === 0) {
+    if(now.diff(time, 'milliseconds') >= -100 && now.diff(time, 'milliseconds') <= 100) {
       return true;
     } else{
       return false;
@@ -8,5 +8,4 @@ exports.soundAlarm = function(time) {
   } else {
     return false;
   }
-
 }

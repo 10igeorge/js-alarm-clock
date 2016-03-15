@@ -6,6 +6,5 @@ $(document).ready(function() {
     $('#allAlarms').append('<li class="list-group-item">' + moment(alarm, 'HH:mm').format('LT') + '</li>');
     $('#alarmTime').val('');
     alarmMoment = moment(alarm, 'HH:mm');
-    //exports.alarmMoment;
   });
 });
