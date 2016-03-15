@@ -1,11 +1,10 @@
-exports.soundAlarm = function(time, now) {
-  if(time != null) {
-    if(now.diff(time, 'milliseconds') >= -100 && now.diff(time, 'milliseconds') <= 100) {
-      return true;
-    } else{
-      return false;
+exports.soundAlarm = function(timeArray, now) {
+  for(var i = 0 ; i < timeArray.length ; i++) {
+    if(timeArray[i] !== null) {
+      if(now.diff(timeArray[i], 'milliseconds') >= -495 && now.diff(timeArray[i], 'milliseconds') <= 495) {
+        return true;
+      }
     }
-  } else {
-    return false;
   }
-}
+  return false;
+};
