@@ -7,6 +7,7 @@ var utilities = require('gulp-util');
 var buildProduction = utilities.env.production;
 var del = require('del');
 var jshint = require('gulp-jshint');
+var moment = require('moment');
 var lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
