@@ -1,6 +1,8 @@
-var moment = require('moment');
+var update = require('./../js/update.js').update;
 
 $(document).ready(function(){
-  var currentTime = moment().format('LTS');
-  $('#currentTime').append(currentTime);
+  clock = function() {
+    $('#currentTime').html(update());
+  };
+  setInterval(clock, 1000);
 });
